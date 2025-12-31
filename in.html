@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Новым Годом, наша Татьяна Сергеевна!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Marck+Script&family=Bad+Script&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0c2461 0%, #1e3799 50%, #4a69bd 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            font-family: 'Bad Script', cursive;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0 20px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 0 0 25px rgba(255, 100, 100, 0.6);
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #ffd700, #ff8c00, #ff4500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            font-family: 'Caveat', cursive;
+            letter-spacing: 2px;
+        }
+        
+        .group-name {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+            font-family: 'Marck Script', cursive;
+        }
+        
+        .curator-name {
+            font-size: 3rem;
+            color: #ff6b6b;
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.7);
+            font-family: 'Pacifico', cursive;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .congratulations {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 35px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .congratulations:before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: sparkle 20s linear infinite;
+            z-index: -1;
+        }
+        
+        @keyframes sparkle {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .congratulations h2 {
+            color: #ffd700;
+            margin-bottom: 25px;
+            font-size: 2.8rem;
+            text-align: center;
+            font-family: 'Marck Script', cursive;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        
+        .congratulations p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: justify;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .congratulations p:before {
+            content: "❄";
+            position: absolute;
+            left: -5px;
+            color: #ffd700;
+        }
+        
+        .music-player {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 35px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(76, 209, 55, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .music-player:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(76, 209, 55, 0.1) 50%, transparent 70%);
+            animation: shine 3s infinite;
+            z-index: -1;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .music-player h2 {
+            color: #4cd137;
+            margin-bottom: 30px;
+            font-size: 2.8rem;
+            font-family: 'Marck Script', cursive;
+            text-shadow: 0 0 10px rgba(76, 209, 55, 0.5);
+        }
+        
+        .player-icon {
+            font-size: 6rem;
+            color: #4cd137;
+            margin: 25px 0;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-shadow: 0 0 15px rgba(76, 209, 55, 0.7);
+            filter: drop-shadow(0 0 10px rgba(76, 209, 55, 0.5));
+        }
+        
+        .player-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+            color: #44bd32;
+        }
+        
+        .player-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+        }
+        
+        .play-button {
+            background: linear-gradient(135deg, #4cd137, #44bd32, #2ecc71);
+            border: none;
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.5rem;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(76, 209, 55, 0.5), 0 0 30px rgba(76, 209, 55, 0.3);
+            font-family: 'Caveat', cursive;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .play-button:before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
+            background-size: 10px 10px;
+            animation: twinkle 3s linear infinite;
+            z-index: -1;
+        }
+        
+        @keyframes twinkle {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(20px); }
+        }
+        
+        .play-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(76, 209, 55, 0.7), 0 0 40px rgba(76, 209, 55, 0.4);
+        }
+        
+        .play-button:active {
+            transform: translateY(-2px);
+        }
+        
+        .volume-control {
+            width: 85%;
+            margin-top: 20px;
+        }
+        
+        .volume-control label {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: block;
+            color: #ffd700;
+            font-family: 'Caveat', cursive;
+        }
+        
+        .volume-control input {
+            width: 100%;
+            height: 12px;
+            -webkit-appearance: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            outline: none;
+        }
+        
+        .volume-control input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4cd137;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(76, 209, 55, 0.8);
+        }
+        
+        .arrow-hint {
+            position: absolute;
+            right: 20px;
+            top: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 100;
+        }
+        
+        .arrow {
+            font-size: 4rem;
+            color: #ffd700;
+            animation: bounce 2s infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7));
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-15px);}
+            60% {transform: translateY(-7px);}
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+            border-top: 2px solid rgba(255, 215, 0, 0.3);
+            font-size: 1.5rem;
+            color: #ffd700;
+            position: relative;
+        }
+        
+        footer:before {
+            content: "✨";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+        }
+        
+        .signature {
+            font-size: 2rem;
+            margin-top: 15px;
+            color: #ff6b6b;
+            font-family: 'Pacifico', cursive;
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+        }
+        
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.9;
+            filter: blur(1px) drop-shadow(0 0 5px white);
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px) rotate(0deg);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .group-name {
+                font-size: 2rem;
+            }
+            
+            .curator-name {
+                font-size: 2.2rem;
+            }
+            
+            .arrow-hint {
+                display: none;
+            }
+            
+            .congratulations h2, .music-player h2 {
+                font-size: 2.2rem;
+            }
+            
+            .congratulations p {
+                font-size: 1.2rem;
+            }
+            
+            .play-button {
+                padding: 15px 30px;
+                font-size: 1.3rem;
+            }
+            
+            .player-icon {
+                font-size: 4.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .curator-name {
+                font-size: 1.8rem;
+            }
+            
+            .congratulations, .music-player {
+                padding: 25px;
+            }
+        }
+        
+        .decoration {
+            position: absolute;
+            z-index: 5;
+            font-size: 2.5rem;
+            opacity: 0.7;
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        .decoration:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            color: #ff6b6b;
+            animation-delay: 0s;
+        }
+        
+        .decoration:nth-child(2) {
+            top: 15%;
+            right: 8%;
+            color: #4cd137;
+            animation-delay: 1s;
+        }
+        
+        .decoration:nth-child(3) {
+            bottom: 20%;
+            left: 7%;
+            color: #ffd700;
+            animation-delay: 2s;
+        }
+        
+        .decoration:nth-child(4) {
+            bottom: 15%;
+            right: 10%;
+            color: #6c5ce7;
+            animation-delay: 3s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="snowflakes" id="snowflakes"></div>
+
+    <div class="decoration">🎄</div>
+    <div class="decoration">🎁</div>
+    <div class="decoration">❄️</div>
+    <div class="decoration">✨</div>
+    
+    <div class="container">
+        <header>
+            <h1>С Новым 2026 Годом!</h1>
+            <div class="group-name">Вам от Китайской партии❄️</div>
+            <div class="curator-name">Дорогой нашей Татьяне Сергеевне!</div>
+        </header>
+        
+        <div class="arrow-hint">
+            <div class="arrow">↓</div>
+        </div>
+        
+        <div class="main-content">
+            <div class="congratulations">
+                <h2>Поздравление</h2>
+                <p>Дорогая наша Татьяна Сергеевна!</p>
+                <p>От всей Китайской партии хотим поздравить Вас с наступающим Новым годом! Пусть этот год принесет Вам много радости, счастья, вдохновения и ярких моментов.</p>
+                <p>Желаем, чтобы все Ваши мечты сбывались, планы реализовывались, а здоровье и энергия никогда не иссякали. Спасибо Вам за терпение, мудрость и поддержку, которую Вы нам оказываете.</p>
+                <p>Пусть новый год будет полон интересных событий, приятных сюрпризов и теплых встреч. Желаем Вам и Вашим близким крепкого здоровья, благополучия и новогоднего настроения!</p>
+                <p>С наилучшими пожеланиями, Ваша Китайская партия❤️</p>
+            </div>
+            
+            <div class="music-player">
+                <h2>Новогодняя песня</h2>
+                <div class="player-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="player-controls">
+                    <button class="play-button" id="playButton">
+                        <i class="fas fa-play"></i>
+                        Включить новогоднюю песню
+                    </button>
+                    
+                    <div class="volume-control">
+                        <label for="volume">Громкость:</label>
+                        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.7">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>С наилучшими пожеланиями в Новом 2026 году!</p>
+            <div class="signature">Ваша Китайская партия❤️</div>
+        </footer>
+    </div>
+    
+    <audio id="newYearSong">
+        <source src="https://www.dropbox.com/scl/fi/x5tqn6mbbhrhwf4v71opb/.mp3?rlkey=g8whlr7rmssdhciv273xds2n3&raw=1" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио элемент.
+    </audio>
+    
+    <script>
+        function createSnowflakes() {
+            const snowflakesContainer = document.getElementById('snowflakes');
+            const snowflakeCount = 150;
+            
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                
+                const size = Math.random() * 12 + 5;
+                snowflake.style.width = `${size}px`;
+                snowflake.style.height = `${size}px`;
+               
+                const whiteness = Math.random() * 100 + 155;
+                snowflake.style.backgroundColor = `rgb(${whiteness}, ${whiteness}, ${whiteness})`;
+                
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                
+                const duration = Math.random() * 15 + 10;
+                snowflake.style.animation = `fall ${duration}s linear infinite`;
+                
+                snowflake.style.animationDelay = `${Math.random() * 15}s`;
+                
+                snowflakesContainer.appendChild(snowflake);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            createSnowflakes();
+            
+            const audioPlayer = document.getElementById('newYearSong');
+            const playButton = document.getElementById('playButton');
+            const volumeControl = document.getElementById('volume');
+            const playIcon = playButton.querySelector('i');
+            
+            audioPlayer.volume = volumeControl.value;
+            
+            playButton.addEventListener('click', function() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    playIcon.classList.remove('fa-play');
+                    playIcon.classList.add('fa-pause');
+                    playButton.innerHTML = '<i class="fas fa-pause"></i> Пауза';
+                    
+                    document.querySelectorAll('.decoration').forEach(el => {
+                        el.style.animationDuration = '3s';
+                    });
+                } else {
+                    audioPlayer.pause();
+                    playIcon.classList.remove('fa-pause');
+                    playIcon.classList.add('fa-play');
+                    playButton.innerHTML = '<i class="fas fa-play"></i> Включить новогоднюю песню';
+                }
+                
+                const arrowHint = document.querySelector('.arrow-hint');
+                if (arrowHint) {
+                    arrowHint.style.opacity = '0';
+                    arrowHint.style.transition = 'opacity 1s';
+                    setTimeout(() => {
+                        arrowHint.style.display = 'none';
+                    }, 1000);
+                }
+            });
+            
+            volumeControl.addEventListener('input', function() {
+                audioPlayer.volume = this.value;
+            });
+            
+            audioPlayer.addEventListener('ended', function() {
+                playIcon.classList.remove('fa-pause');
+                playIcon.classList.add('fa-play');
+                playButton.innerHTML = '<i class="fas fa-play"></i> Включить новогоднюю песню';
+            });
+        });
+    </script>
+</body>
+</html>
